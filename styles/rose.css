@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.work-sans-font {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*{
+Bordar:0;
+Margin:0;
+Box-sizing:bordar- box
+}
+
+  
 /* shared style */
 .dark-1{
     color: #252432;
@@ -8,12 +25,21 @@
 .dark-3{
     color: #E95A08;
 }
+.dark-4{
+  color: #FFFFFF;
+}
+.dark-5{
+  color: #C8C8C8;
+}
 
 .bold{
     font-weight: bold;
     
 }
-
+body{
+  max-width: 1140px;
+  margin: 0 auto;
+}
 /* nav section */
 .navbar{
     display: flex;
@@ -36,81 +62,184 @@
     text-decoration: none;
 }
 
-main{
-  max-width: 1140pxpx;
-  margin: 0 auto;
-}
+
 /* banner section */
-.banner{
+  .banner{
+
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    align-items: flex-end;
     
+  }
+  .hero-title{
+    width: 50%;
+
+  }
+  .hero-title h2{
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .hero-title p{
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+  .hero-img{
+    width: 50%;
+
+  }
+  .hero-img img{
+    width: 100%;
+  }
+
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat( 4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
   
+}
+.plants h2{
+  font-size: 2rem;
+  text-align: center;
+}
+.plants p{
+  text-align: center;
    
 }
-.banner h2{
-  font-size: 3rem;
+.plant-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.plant-card img {
+  width: 100%;
+  height: auto;
+}
+
+.plant-card h3 {
+  margin: 10px 0 5px;
   
-}
-.hero-title{
-    width: 40%;
-    padding-top: 60px;
-    padding-left: 150px;
-    gap: 130px;
-    
-}
-.hero-img{
-    width: 50%;
-   padding-right: 0px;
+  text-align: center;
+
 }
 
-/* media query section */
+.plant-card p {
+  font-weight: bold;
+  text-align: center;
+ 
+}
+.gap{
+  margin-bottom: 30px;
+}
 
-@media screen and (max-width: 576px) {
-    body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-
-    .navbar {
-        flex-direction: row;
+.plant-card button {
+  background-color: #E95A08;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+/* flower and plant section */
+    .flower{
+        display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin: 10px 20px;
+        align-items: stretch;
+        margin-top: 130px;
+        gap: 60px;
     }
+    .flower-img{
+     width: 50%;
+    }
+    .flower-img img{
+      width: 100%;
+    }
+    .flower-content{
+          width: 50%;
+          
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+ 
+          padding: 20px;
 
-    .nav-links {
-        display: none; 
     }
+    .flower-content h2{
+      font-size: 50px;
+      font-weight: bold;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .flower-content ul{
+      
+      padding-left: 0;
+      list-style-position: inside;
+    }
+    .flower-content li{
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
 
-    .cart {
-        display: flex; 
-        align-items: center;
-        gap: 5px;
-    }
 
-    .banner {
-        flex-direction: column-reverse;
-        align-items: center;
-        padding: 10px 20px;
-        gap: 20px;
-    }
+    
 
-    .hero-title,
-    .hero-img {
-        width: 100%;
-        padding: 10px 0;
-        text-align: center;
-    }
-
-    .hero-img img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .banner h2 {
-        font-size: 2rem;
-    }
+ .container{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 150px;
+  padding-right: 150px;
 }
+.section-gap{
+        margin-top: 30px;
+}
+@media screen and (max-width: 576px) {
+  .nav-links {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .nav-item {
+    display: none; 
+  }
+
+  .nav-item.cart {
+    display: flex; 
+    align-items: center;
+    gap: 5px;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 20px;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 20px;
+  }
+
+  .hero-title,
+  .hero-img {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .hero-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .banner h2 {
+    font-size: 2rem;
+  }
+}
+
