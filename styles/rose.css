@@ -1,0 +1,37 @@
+/* shared style */
+.dark-1{
+    color: #252432;
+}
+.dark-2{
+        color: #8987A1;
+}
+.dark-3{
+    color: #E95A08;
+}
+
+.bold{
+    font-weight: bold;
+    
+}
+
+/* nav section */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 150px auto;
+}
+.nav-item{
+    
+    list-style: none;
+    margin-right: 1.25rem;
+
+}
+.nav-links{
+    display: flex;
+    
+   
+}
+.nav-link{
+    text-decoration: none;
+}
