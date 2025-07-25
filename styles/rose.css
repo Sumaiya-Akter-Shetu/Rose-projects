@@ -7,12 +7,29 @@
   font-weight: 400;
   font-style: normal;
 }
-
-*{
-Bordar:0;
-Margin:0;
-Box-sizing:bordar- box
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
+button:hover {
+    text-transform: uppercase;
+    text-shadow: gray;
+}
+
+
+body {
+    background-color: #F5F8FF;
+
+}
+
+/* :root {
+    --primaryColorRed: #E95A08;
+    --primaryColorBlack: #000000;
+    --color-Gray: #6B7280;
+} */
+
 
   
 /* shared style */
@@ -20,7 +37,8 @@ Box-sizing:bordar- box
     color: #252432;
 }
 .dark-2{
-        color: #8987A1;
+        
+        color: rgba(0, 0, 0, 0.5);
 }
 .dark-3{
     color: #E95A08;
@@ -31,21 +49,29 @@ Box-sizing:bordar- box
 .dark-5{
   color: #C8C8C8;
 }
+.dark-6{
+  
+}
 
 .bold{
     font-weight: bold;
     
 }
-body{
+.container{
   max-width: 1140px;
   margin: 0 auto;
+  padding-left: 150px;
+  padding-right: 150px;
+
 }
+
 /* nav section */
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 150px auto;
+    margin-top: 30px;
+    
 }
 .nav-item{
     
@@ -91,7 +117,7 @@ body{
   .hero-img img{
     width: 100%;
   }
-
+ /* Plants section */
 .plant-grid {
   display: grid;
   grid-template-columns: repeat( 4, 1fr);
@@ -144,7 +170,7 @@ body{
   margin-top: 10px;
   cursor: pointer;
 }
-/* flower and plant section */
+/* plants lover section */
     .flower{
         display: flex;
         justify-content: space-between;
@@ -152,11 +178,18 @@ body{
         margin-top: 130px;
         gap: 60px;
     }
-    .flower-img{
-     width: 50%;
+    .image-container{
+      width: 50%;
+      position: relative;
     }
-    .flower-img img{
-      width: 100%;
+     .main-image img{
+      width: 100%;}
+
+    .badge-image img{
+      position: absolute;
+      top: -90px;
+      right: -90px;
+      width: 190px;
     }
     .flower-content{
           width: 50%;
@@ -168,8 +201,8 @@ body{
           padding: 20px;
 
     }
-    .flower-content h2{
-      font-size: 50px;
+    .flower-content h1{
+      font-size: 40px;
       font-weight: bold;
       margin-left: 0;
       padding-left: 0;
@@ -184,19 +217,180 @@ body{
       line-height: 1.6;
     }
     
-
-
-    
-
- .container{
-  max-width: 1140px;
-  margin: 0 auto;
-  padding-left: 150px;
-  padding-right: 150px;
+      /* Leatest deals section */
+      
+.letest-deal{
+   margin-top: 60px;
+   margin-bottom: 60px;
 }
+
+.letest-deal .letest-deal-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.letest-deal .letest-deal-title h2 {
+    font-size: 40px;
+    font-weight: bold;
+  
+}
+
+.letest-deal .letest-deal-title h2 span {
+    
+}
+
+.letest-deal .letest-deal-title p {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 20px 0 30px 0;
+}
+
+.letest-deal .deal-box {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 197px 197px;
+}
+
+.letest-deal .bloom-plant {
+    background-image: linear-gradient(rgba(38, 37, 37, 0.6), rgba(40, 39, 39, 0.4)), url(../assets/deal-bloom.png);
+    background-size: cover;
+    border-radius: 14px;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.letest-deal .zabo-plant {
+    background-image: linear-gradient(rgba(38, 37, 37, 0.6), rgba(40, 39, 39, 0.4)), url(../assets/deal-zabo.png);
+    grid-row: span 2;
+    border-radius: 14px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.letest-deal .ana-plant {
+    background-image: linear-gradient(rgba(38, 37, 37, 0.6), rgba(40, 39, 39, 0.4)), url(../assets/deal-ana.png);
+    border-radius: 14px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.deal-box div h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.deal-box div span {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.deal-box .zabo-plant h2 {
+    font-size: 40px;
+}
+
+.deal-box .zabo-plant span {
+    font-size: 26px;
+    text-underline-offset: 6px;
+}
+    
+      /* Join section */
+    
+      .newsletter{
+          background-image: url('../assets/news-letter-bg.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          padding: 100px 20px;
+          text-align: center;
+          color: #FFFFFF;
+     }
+      .newsletter-content{
+
+      }
+      .newsletter-content h1{
+        text-align: center;
+       font-size: 40px;
+       font-weight: bold;
+       padding-bottom: 25px;
+      }
+      .input-group{
+        display: inline-flex;
+        width: 100%;
+        max-width: 500px;
+        
+      }
+      .input-group input{
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 0 4px 4px 0;
+
+      }
+      .input-group button{
+        background-color: #E95A08;
+        color:#FFFFFF;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+      }
+     /* footer section */
+      .footer-section{
+       max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 0;
+      /* padding-top: 50px;
+      padding-bottom: 50px; */
+      padding: 50px 0 50px 10px;
+    }
+    
+    .footer-links li{
+      list-style: none;
+      padding: 10px;
+    }
+    .footer-link{
+      text-decoration: none;
+    }
+
+    .footer-logo{
+      font-size: 1rem;
+    }
+    .footer-logo img{
+      padding-bottom: 15px;
+    }
+  
+      .icon-items img{
+        padding-right: 15px;
+      }
+    
+    .icon-items .twitter{
+      margin-bottom: 8px;
+    }
+ 
 .section-gap{
         margin-top: 30px;
 }
+/* media query */
 @media screen and (max-width: 576px) {
   .nav-links {
     flex-direction: row;
