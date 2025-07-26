@@ -128,8 +128,10 @@ body {
 .plants h2{
   font-size: 2rem;
   text-align: center;
+  padding-bottom: 16px;
 }
 .plants p{
+  font-size: 1.125rem;
   text-align: center;
    
 }
@@ -193,11 +195,10 @@ body {
     }
     .flower-content{
           width: 50%;
-          
           display: flex;
           flex-direction: column;
           justify-content: space-between;
- 
+          list-style: inside;
           padding: 20px;
 
     }
@@ -241,7 +242,7 @@ body {
 }
 
 .letest-deal .letest-deal-title p {
-    font-size: 20px;
+    font-size: 1.125rem;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 20px 0 30px 0;
@@ -326,10 +327,6 @@ body {
           
      }
      
-    
-      .newsletter-content{
-
-      }
       .newsletter-content h1{
         text-align: center;
        font-size: 40px;
@@ -363,8 +360,6 @@ body {
       display: grid;
       grid-template-columns: repeat(4,1fr);
       gap: 0;
-      /* padding-top: 50px;
-      padding-bottom: 50px; */
       padding: 50px 0 50px 10px;
     }
     
@@ -395,52 +390,6 @@ body {
         margin-top: 30px;
 }
 /* media query */
-/* @media screen and (max-width: 576px) {
-  .nav-links {
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
-  .nav-item {
-    display: none; 
-  }
-
-  .nav-item.cart {
-    display: flex; 
-    align-items: center;
-    gap: 5px;
-  }
-
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px 20px;
-  }
-
-  .banner {
-    flex-direction: column-reverse;
-    align-items: center;
-    padding: 10px 20px;
-    gap: 20px;
-  }
-
-  .hero-title,
-  .hero-img {
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-  }
-
-  .hero-img img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .banner h2 {
-    font-size: 2rem;
-  }
-}
- */
 
  @media screen and (max-width: 576px) {
   /* Prevent horizontal scrollbar */
@@ -451,30 +400,44 @@ body {
   .container {
     padding-left: 20px;
     padding-right: 20px;
+    width: 100%;
   }
 
   /* Navbar */
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px 20px;
+
+   .navbar {
+    flex-wrap: nowrap;
+    gap: 10px;
   }
 
   .nav-links {
-    flex-direction: row;
-    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 10px;
   }
 
-  .nav-item {
+  .nav-link.cart {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  .nav-item.hidden {
     display: none;
   }
 
-  .nav-item.cart {
+  .nav-item.visible {
     display: flex;
     align-items: center;
-    gap: 5px;
+    padding-top: 40px;
   }
 
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+ 
   /* Banner */
     .banner .container{
       padding-left: 0;
@@ -484,7 +447,7 @@ body {
   .banner {
     flex-direction: column-reverse;
     align-items: center;
-    padding: 0 10px;
+    padding: 0;
     gap: 20px;
   }
 
@@ -492,7 +455,8 @@ body {
   .hero-img {
     width: 100%;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
+    margin: 0 auto;
   }
 
   .hero-title h2 {
@@ -513,6 +477,10 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
+  .plants p{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   /* Plant Lover Section */
   .flower {
@@ -524,13 +492,15 @@ body {
   .image-container,
   .flower-content {
     width: 100%;
-    text-align: left;
+    text-align: end;
+
   }
 
   .flower-content h1 {
     font-size: 1.5rem;
     text-align: left;
   }
+  
 
   /* Trusted Badge hide */
   .badge-image img {
@@ -574,33 +544,29 @@ body {
     font-size: 1.5rem;
   }
 
-  .input-group {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .input-group input {
-    width: 100%;
+    width: 60%;
     border-radius: 4px;
   }
 
   .input-group button {
-    width: 100%;
+    width: 40%;
     border-radius: 4px;
   }
 
   /* Footer Section */
+
   .footer-section {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 30px 20px;
     text-align: center;
   }
-
+   
   .footer-logo {
     margin-bottom: 20px;
   }
-
+  
   .icon-items {
     justify-content: center;
   }
