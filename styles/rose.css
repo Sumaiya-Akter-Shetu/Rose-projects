@@ -402,6 +402,9 @@ body {
     padding-right: 20px;
     width: 100%;
   }
+  .break{
+    display: none;
+  }
 
   /* Navbar */
 
@@ -461,10 +464,14 @@ body {
 
   .hero-title h2 {
     font-size: 1.5rem;
+    text-align: start;
+    padding: 10px;
   }
 
   .hero-title p {
     font-size: 1rem;
+    text-align: start;
+    padding: 10px;
   }
 
   .hero-img img {
@@ -497,9 +504,13 @@ body {
   }
 
   .flower-content h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: start;
     padding-bottom: 20px;
+  
+  }
+  .flower-content p{
+    text-align: center;
   }
   
 
@@ -566,9 +577,15 @@ body {
    
   .footer-logo {
     margin-bottom: 20px;
+    text-align: start;
   }
+  .footer-links{
+    text-align: start;
+  }
+  
   
   .icon-items {
     justify-content: center;
+    text-align: start;
   }
 }
